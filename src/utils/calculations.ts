@@ -1,18 +1,12 @@
-export const add = (a: number, b: number): number => {
-    return a + b;
-};
+// utils/calculations.ts
 
-export const subtract = (a: number, b: number): number => {
-    return a - b;
-};
-
-export const multiply = (a: number, b: number): number => {
-    return a * b;
-};
-
-export const divide = (a: number, b: number): number => {
-    if (b === 0) {
-        throw new Error("Cannot divide by zero");
-    }
-    return a / b;
+// Define your calculation functions here
+export const add = (a: number, b: number) => a + b;
+export const subtract = (a: number, b: number) => a - b;
+export const multiply = (a: number, b: number) => a * b;
+export const divide = (a: number, b: number) => {
+  if (b === 0) {
+    throw new Error("Cannot divide by zero");
+  }
+  return a / b;
 };
