@@ -6,58 +6,97 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: #333;
 }
 
 .calculator {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 320px; /* Slightly wider for better button alignment */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 360px; /* Increased width for more comfortable button placement */
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-gap: 10px;
+    grid-gap: 20px;
 }
 
 .display {
     background-color: #eaeaea;
     border: none;
-    border-radius: 5px;
-    font-size: 2em; /* Larger font size for better visibility */
-    padding: 10px;
+    border-radius: 10px;
+    font-size: 2.5em; /* Larger font size for better visibility */
+    padding: 20px;
     text-align: right;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    color: #333;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .button {
     background-color: #0070f3;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     color: white;
-    font-size: 1.2em; /* Adjusted font size for better fit */
-    margin: 5px;
-    padding: 15px;
+    font-size: 1.5em; /* Adjusted font size for better readability */
+    margin: 10px;
+    padding: 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {
     background-color: #005bb5;
+    transform: translateY(-2px);
 }
 
 .button:active {
     background-color: #003f8a;
+    transform: translateY(2px);
 }
 
 .buttons-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
-    grid-gap: 10px;
+    grid-gap: 15px;
+}
+
+.button.operator {
+    background-color: #ff7f50; /* Distinct color for operators */
+}
+
+.button.operator:hover {
+    background-color: #e66a36; /* Slightly darker on hover */
+}
+
+.button.equals {
+    background-color: #4caf50; /* Green for equals button */
+    grid-column: span 2; /* Makes the equals button span across two columns */
+}
+
+.button.equals:hover {
+    background-color: #45a049;
+}
+
+.button.clear {
+    background-color: #f44336; /* Red for clear button */
+}
+
+.button.clear:hover {
+    background-color: #d32f2f;
+}
+
+.button.special {
+    background-color: #9e9e9e; /* Gray for special buttons like +/- */
+}
+
+.button.special:hover {
+    background-color: #7d7d7d;
 }
